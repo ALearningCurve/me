@@ -1,10 +1,5 @@
-$color-accent-100:#fcfeff;
-$color-accent-300:#a1dab4;
-$color-accent-500:#0fd853;
-$color-nuetral-200:#6b7ca0;
-$color-nuetral-500:#3e485c;
-$color-nuetral-800:#303747;
 // Resize friendly
+@import 'colors';
 $center-width: calc(min(1000px, 90%));
 *,
 *::before,
@@ -18,7 +13,7 @@ body {
     height: 100vh;
     width: 100vw;
     line-height: 1.6;
-    background-color: $color-nuetral-800;
+    background-color: $color-nuetral-500;
     color: $color-accent-100;
     overflow: hidden;
 }
@@ -33,7 +28,7 @@ h1 {
     padding-left: 12px;
     margin-top: .05em;
     margin-bottom: 0px;
-    color: white;
+    color: $color-accent-100;
     text-transform: uppercase;
 }
 
@@ -97,3 +92,5 @@ h1 {
 #main {
     background-image: url(./images/richard-horvath-_nWaeTF6qo0-unsplash.jpg);
 }
+
+@import 'cards';

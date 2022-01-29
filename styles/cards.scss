@@ -1,0 +1,110 @@
+@import 'colors';
+.card {
+    color: $color-accent-100;
+    background-image: url(../images/rick-rothenberg-gCPX5cwUKbA-unsplash.jpg);
+    background-size: cover;
+    padding: 8rem 0 0;
+    max-width: 35ch;
+    border-radius: 1em;
+    overflow: hidden;
+    ;
+}
+
+.card-content {
+    padding: 1rem;
+    background: linear-gradient( rgba(66, 245, 132, 0), $color-nuetral-800, $color-nuetral-800);
+    overflow: hidden;
+    border-radius: 1em;
+}
+
+.card-title {
+    position: relative;
+    width: max-content;
+}
+
+.card-title::before {
+    content: "";
+    position: absolute;
+    left: -1rem;
+    bottom: 0;
+    height: 100%;
+    width: calc(100% + 1.5rem);
+    background: $color-accent-500;
+    z-index: -1;
+    transform-origin: left;
+    transition: transform 750ms cubic-bezier(0.210, 1.650, 0.665, -0.600);
+}
+
+.card-body {
+    color: $color-accent-100;
+}
+
+.button {
+    cursor: pointer;
+    display: inline;
+    text-decoration: none;
+    color: $color-accent-800;
+    background-color: $color-accent-100;
+    padding: .5em;
+    border-radius: .25em;
+}
+
+.button:hover,
+.button:focus {
+    background-color: $color-accent-300;
+}
+
+
+/* be mobile friendly */
+
+@media (hover) {
+    .card-content {
+        transform: translateY(75%);
+        transition: transform 750ms;
+    }
+    .card-content>*:not(.card-title) {
+        opacity: 0;
+        transition: opacity 500ms;
+    }
+    .card:hover,
+    .card:focus,
+    .card:focus-within {
+        transform: scale(1.01);
+        transition: transform 750ms;
+    }
+    .card:hover .card-title::before,
+    .card:focus-within .card-title::before {
+        transform: scaleX(100%);
+    }
+    .card:hover .card-content,
+    .card:focus-within .card-content {
+        transform: translateY(0%);
+        transition-delay: 200ms;
+    }
+    .card:focus-within .card-content {
+        transition-duration: 0ms;
+    }
+    .card:hover .card-content>*,
+    .card:focus-within .card-content>* {
+        opacity: 1;
+        transition-delay: 750ms;
+    }
+    .card-title::before {
+        transform: scaleX(0%);
+    }
+}
+
+
+/* disable animations */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+        transition-delay: 0ms !important;
+    }
+}
