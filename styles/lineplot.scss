@@ -18,6 +18,7 @@ $bar-size: .2rem;
     display: flex;
     flex-direction: column;
     position: relative;
+    padding-bottom: 10px;
     &>.node {
         $main-color: $color-accent-500;
         width: $half-width !important;
@@ -30,7 +31,7 @@ $bar-size: .2rem;
             top: 50%;
             display: block;
             transform: translateY(-50%);
-            height: 110%;
+            height: calc(100% + 10px);
             width: $bar-size;
             background: $main-color;
             z-index: -2;

@@ -73,6 +73,7 @@ h1 {
             padding-right: 2em;
             width: $center-width;
             margin: 0 auto;
+            margin-bottom: 20px;
             h1 {
                 position: relative;
                 left: -.5em;
@@ -102,7 +103,7 @@ h1 {
         /* justify-content: center; */
         min-height: 100vh;
         width:100%;
-        padding-bottom: 5em;
+        // padding-bottom: 2em;
         // margin: 0 auto;
         /* scrolling */
         scroll-snap-align: start;
