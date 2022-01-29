@@ -1,7 +1,9 @@
 @import 'colors';
+$card-min-width: 25ch;
+$card-max-width: 35ch;
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(#{$card-min-width}, auto));
     grid-auto-rows: auto;
     grid-gap: 1rem;
 }
@@ -11,7 +13,7 @@
     background-image: url(../images/rick-rothenberg-gCPX5cwUKbA-unsplash.jpg);
     background-size: cover;
     padding: 8rem 0 0;
-    max-width: 35ch;
+    max-width: $card-max-width;
     border-radius: 1em;
     overflow: hidden;
     .card-content {
