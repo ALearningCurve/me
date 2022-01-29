@@ -1,0 +1,93 @@
+@import 'measurements';
+@import 'colors';
+$gutter: 40px;
+$half-width: calc( 50% - #{$gutter});
+$bar-size: .2rem;
+// Emulate repeating effecgt of alternating "nodes"
+// along a stem 
+// --------  | 
+// | foo  |  |
+// -------   |  -------
+//           | | bar  |
+//           | -------
+// --------  | 
+// | moo  |  |
+// -------   |
+//  (repeat for n elements)
+.stem-leaf-plot {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &>.node {
+        $main-color: $color-accent-500;
+        width: $half-width !important;
+        position: relative;
+        // ! Stuff for the positioning of stems and nodes
+        // The stem in the middle of each element
+        @mixin pseudo-line {
+            content: "";
+            position: absolute;
+            top: 50%;
+            display: block;
+            transform: translateY(-50%);
+            height: 110%;
+            width: $bar-size;
+            background: $main-color;
+            z-index: -2;
+        }
+        // The dot in the middle of each stem
+        @mixin pseudo-dot {
+            content: "";
+            position: absolute;
+            top: 50%;
+            display: block;
+            transform: translateY(-50%);
+            $dot-size: calc(#{$bar-size} * 3);
+            height: $dot-size;
+            width: $dot-size;
+            background: $main-color;
+            border-radius: 50%;
+            z-index: -1;
+        }
+        // Offset to center between nodes on either side
+        $center-offset: calc(-1 * #{$gutter} / 2 - #{$bar-size} / 2);
+        &:nth-child(even) {
+            left: calc(#{$half-width} + #{$gutter});
+            &::after {
+                left: $center-offset;
+                @include pseudo-line;
+            }
+            &::before {
+                left: $center-offset;
+                @include pseudo-dot;
+            }
+        }
+        &:nth-child(odd) {
+            &::after {
+                right: $center-offset;
+                @include pseudo-line;
+            }
+            &::before {
+                right: $center-offset;
+                @include pseudo-dot;
+            }
+        }
+        // ! Stuff for the node content
+        .node-body {
+            .date {
+                color: $main-color;
+            }
+            .org {
+                text-transform: uppercase;
+                font-size: x-large;
+                font-weight: bold;
+                color: $color-accent-100;
+            }
+            .position {
+                color: $color-accent-100;
+                font-size: larger;
+            }
+            .description {}
+        }
+    }
+}

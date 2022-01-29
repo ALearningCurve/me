@@ -1,0 +1,94 @@
+.stem-leaf-plot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.stem-leaf-plot > .node {
+  width: calc( 50% - 40px) !important;
+  position: relative;
+}
+
+.stem-leaf-plot > .node:nth-child(even) {
+  left: calc(calc( 50% - 40px) + 40px);
+}
+
+.stem-leaf-plot > .node:nth-child(even)::after {
+  left: calc(-1 * 40px / 2 - 0.2rem / 2);
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: block;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 110%;
+  width: 0.2rem;
+  background: #0fd853;
+  z-index: -2;
+}
+
+.stem-leaf-plot > .node:nth-child(even)::before {
+  left: calc(-1 * 40px / 2 - 0.2rem / 2);
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: block;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: calc(0.2rem * 3);
+  width: calc(0.2rem * 3);
+  background: #0fd853;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.stem-leaf-plot > .node:nth-child(odd)::after {
+  right: calc(-1 * 40px / 2 - 0.2rem / 2);
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: block;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 110%;
+  width: 0.2rem;
+  background: #0fd853;
+  z-index: -2;
+}
+
+.stem-leaf-plot > .node:nth-child(odd)::before {
+  right: calc(-1 * 40px / 2 - 0.2rem / 2);
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: block;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: calc(0.2rem * 3);
+  width: calc(0.2rem * 3);
+  background: #0fd853;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.stem-leaf-plot > .node .node-body .date {
+  color: #0fd853;
+}
+
+.stem-leaf-plot > .node .node-body .org {
+  text-transform: uppercase;
+  font-size: x-large;
+  font-weight: bold;
+  color: #f8fcf9;
+}
+
+.stem-leaf-plot > .node .node-body .position {
+  color: #f8fcf9;
+  font-size: larger;
+}
+/*# sourceMappingURL=lineplot.css.map */

@@ -1,7 +1,7 @@
 // Resize friendly
 @import 'colors';
-$center-width: calc(min(1000px, 90%));
-*,
+@import 'measurements';
+*::not(body),
 *::before,
 *::after {
     box-sizing: border-box;
@@ -16,6 +16,8 @@ body {
     background-color: $color-nuetral-500;
     color: $color-accent-100;
     overflow: hidden;
+    margin: 0px !important;
+    padding: 0px !important;
 }
 
 h1 {
@@ -113,3 +115,4 @@ h1 {
 }
 
 @import 'cards';
+@import 'lineplot';
