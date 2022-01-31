@@ -39,7 +39,7 @@
   bottom: 0;
   height: 100%;
   width: calc(100% + 1.5rem);
-  background: #0fd853;
+  background: #0fd852;
   z-index: -1;
   -webkit-transform-origin: left;
           transform-origin: left;

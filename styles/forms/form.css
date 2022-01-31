@@ -66,6 +66,16 @@
           transform: scale(1.02);
 }
 
+.contact-form-container .disabled {
+  background-color: darkslategrey;
+}
+
+.contact-form-container .disabled:focus, .contact-form-container .disabled:hover {
+  background-color: darkslategrey !important;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .contact-form-container .link-icons {
   margin-top: 6em;
   display: -webkit-box;

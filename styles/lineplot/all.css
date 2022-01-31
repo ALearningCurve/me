@@ -29,7 +29,7 @@
           transform: translateY(-50%);
   height: calc(100% + 10px);
   width: 0.2rem;
-  background: #0fd853;
+  background: #0fd852;
   z-index: -2;
 }
 
@@ -43,7 +43,7 @@
           transform: translateY(-50%);
   height: calc(0.2rem * 3);
   width: calc(0.2rem * 3);
-  background: #0fd853;
+  background: #0fd852;
   border-radius: 50%;
   z-index: -1;
 }
@@ -58,7 +58,7 @@
           transform: translateY(-50%);
   height: calc(100% + 10px);
   width: 0.2rem;
-  background: #0fd853;
+  background: #0fd852;
   z-index: -2;
 }
 
@@ -72,13 +72,13 @@
           transform: translateY(-50%);
   height: calc(0.2rem * 3);
   width: calc(0.2rem * 3);
-  background: #0fd853;
+  background: #0fd852;
   border-radius: 50%;
   z-index: -1;
 }
 
 .stem-leaf-plot > .node .node-body .date {
-  color: #0fd853;
+  color: #0fd852;
 }
 
 .stem-leaf-plot > .node .node-body .org {

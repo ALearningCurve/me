@@ -48,6 +48,14 @@
         transition: background-color ease 100ms;
         transition: transform ease 100ms;
     }
+    .disabled {
+        background-color: darkslategrey;
+        &:focus,
+        &:hover {
+            background-color: darkslategrey !important;
+            transform: scale(1.00);
+        }
+    }
     .link-icons {
         margin-top: 6em;
         display: flex;
