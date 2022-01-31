@@ -1,5 +1,4 @@
-@import 'measurements';
-@import 'colors';
+@import '../conf/all';
 $gutter: 40px;
 $half-width: calc( 50% - #{$gutter});
 $bar-size: .2rem;

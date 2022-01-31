@@ -1,15 +1,14 @@
 // Resize friendly
-@import 'colors';
-@import 'measurements';
-*::not(body),
+@import 'conf/all';
+*:not(body),
 *::before,
 *::after {
-    box-sizing: border-box;
+    box-sizing: border-box !important;
+    font-family: monospace !important;
 }
 
 // ! General Styles
 body {
-    font-family: monospace;
     height: 100vh;
     width: 100vw;
     line-height: 1.6;
@@ -40,6 +39,14 @@ h1 {
 
 .caps {
     text-transform: uppercase;
+}
+
+a {
+    transition: transform ease 200ms;
+    color: inherit;
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 // ! Snapable area
@@ -115,5 +122,6 @@ h1 {
     background-image: url(../images/richard-horvath-_nWaeTF6qo0-unsplash.jpg);
 }
 
-@import 'cards';
-@import 'lineplot';
+@import 'cards/all';
+@import 'lineplot/all';
+@import 'forms/all';
