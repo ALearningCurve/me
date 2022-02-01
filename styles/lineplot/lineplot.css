@@ -92,4 +92,9 @@
   color: #f8fcf9;
   font-size: larger;
 }
+
+.stem-leaf-plot > .node .node-body .description > ol,
+.stem-leaf-plot > .node .node-body .description > ul {
+  padding-left: 1em;
+}
 /*# sourceMappingURL=lineplot.css.map */
