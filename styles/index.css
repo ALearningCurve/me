@@ -124,27 +124,28 @@ a:hover {
 
 .card {
   color: #f8fcf9;
-  background-image: url(../images/rick-rothenberg-gCPX5cwUKbA-unsplash.jpg);
   background-size: cover;
   padding: 8rem 0 0;
   max-width: 35ch;
+  height: 600px;
   border-radius: 1em;
   overflow: hidden;
 }
 
 .card .card-content {
   padding: 1rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(66, 245, 132, 0)), color-stop(#272d3a), to(#272d3a));
-  background: linear-gradient(rgba(66, 245, 132, 0), #272d3a, #272d3a);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 70, 27, 0)), color-stop(rgba(4, 70, 27, 0.5)), color-stop(#272d3a), to(#272d3a));
+  background: linear-gradient(rgba(4, 70, 27, 0), rgba(4, 70, 27, 0.5), #272d3a, #272d3a);
+  height: 600px;
   overflow: hidden;
   border-radius: 1em;
 }
 
 .card .card-content .card-title {
   position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .card .card-content .card-title::before {
@@ -165,6 +166,9 @@ a:hover {
 }
 
 .card .card-content .card-body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 350px;
   color: #f8fcf9;
 }
 
@@ -184,8 +188,8 @@ a:hover {
 
 @media (hover) {
   .card-content {
-    -webkit-transform: translateY(75%);
-            transform: translateY(75%);
+    -webkit-transform: translateY(350px);
+            transform: translateY(350px);
     -webkit-transition: -webkit-transform 750ms;
     transition: -webkit-transform 750ms;
     transition: transform 750ms;
@@ -343,6 +347,11 @@ a:hover {
 .stem-leaf-plot > .node .node-body .position {
   color: #f8fcf9;
   font-size: larger;
+}
+
+.stem-leaf-plot > .node .node-body .description > ol,
+.stem-leaf-plot > .node .node-body .description > ul {
+  padding-left: 1em;
 }
 
 .contact-form-container {

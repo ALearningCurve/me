@@ -1,6 +1,7 @@
 @import '../conf/all';
 $card-min-width: 25ch;
 $card-max-width: 35ch;
+$card-hieght: 600px;
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(#{$card-min-width}, auto));
@@ -10,20 +11,21 @@ $card-max-width: 35ch;
 
 .card {
     color: $color-accent-100;
-    background-image: url(../images/rick-rothenberg-gCPX5cwUKbA-unsplash.jpg);
     background-size: cover;
     padding: 8rem 0 0;
     max-width: $card-max-width;
+    height: 600px;
     border-radius: 1em;
     overflow: hidden;
     .card-content {
         padding: 1rem;
-        background: linear-gradient( rgba(66, 245, 132, 0), $color-nuetral-800, $color-nuetral-800);
+        background: linear-gradient( rgba(4, 70, 27, 0), rgba(4, 70, 27, .5), $color-nuetral-800, $color-nuetral-800);
+        height: $card-hieght;
         overflow: hidden;
         border-radius: 1em;
         .card-title {
             position: relative;
-            width: max-content;
+            width: fit-content;
             &::before {
                 content: "";
                 position: absolute;
@@ -38,6 +40,9 @@ $card-max-width: 35ch;
             }
         }
         .card-body {
+            overflow-y: scroll;
+            overflow-x: hidden;
+            max-height: 350px;
             color: $color-accent-100;
         }
         .button {
@@ -59,7 +64,7 @@ $card-max-width: 35ch;
 // Run animations only if hover is supported
 @media (hover) {
     .card-content {
-        transform: translateY(75%);
+        transform: translateY(350px);
         transition: transform 750ms;
     }
     .card-content>*:not(.card-title) {
