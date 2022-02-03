@@ -20,7 +20,7 @@ $min-card-hieght: 400px;
     overflow: hidden;
     .card-content {
         padding: 1rem;
-        background: linear-gradient( 180deg, rgba(4, 70, 27, 0) 0%, $color-nuetral-700 25%);
+        background: linear-gradient( 180deg, #ffffff00 0%, #acb6cc 14%, $color-nuetral-700 25%);
         height: 100%;
         overflow: hidden;
         border-radius: 1em;
@@ -78,7 +78,7 @@ $min-card-hieght: 400px;
 // Run animations only if hover is supported
 @media (hover) {
     .card-content {
-        transform: translateY(250px);
+        transform: translateY(280px);
         transition: transform 750ms;
     }
     .card-content>*:not(.card-title) {

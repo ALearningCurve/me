@@ -169,8 +169,8 @@ a:hover {
 
 .card .card-content {
   padding: 1rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 70, 27, 0)), color-stop(25%, #272d3a));
-  background: linear-gradient(180deg, rgba(4, 70, 27, 0) 0%, #272d3a 25%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff00), color-stop(14%, #acb6cc), color-stop(25%, #272d3a));
+  background: linear-gradient(180deg, #ffffff00 0%, #acb6cc 14%, #272d3a 25%);
   height: 100%;
   overflow: hidden;
   border-radius: 1em;
@@ -241,8 +241,8 @@ a:hover {
 
 @media (hover) {
   .card-content {
-    -webkit-transform: translateY(250px);
-            transform: translateY(250px);
+    -webkit-transform: translateY(280px);
+            transform: translateY(280px);
     -webkit-transition: -webkit-transform 750ms;
     transition: -webkit-transform 750ms;
     transition: transform 750ms;
