@@ -15,6 +15,14 @@ body {
   overflow: hidden;
   margin: 0px !important;
   padding: 0px !important;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1em;
 }
 
 h1 {
@@ -27,12 +35,24 @@ h1 {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 5em !important;
+  }
+}
+
 .accent {
   color: #0fd852;
 }
 
 .sublead {
   font-size: 2em;
+}
+
+@media screen and (max-width: 800px) {
+  .sublead {
+    font-size: 1.5em !important;
+  }
 }
 
 .caps {
@@ -102,15 +122,21 @@ a:hover {
   width: calc(min(1000px, 90%));
   margin: 0 auto;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .main-container > section > .section-container h1 {
   position: relative;
-  left: -.5em;
+  left: -1em;
 }
 
 #main {
-  background-image: url(../images/richard-horvath-_nWaeTF6qo0-unsplash.jpg);
+  padding-top: 3em;
+}
+
+#main h1 {
+  position: relative;
+  left: 0;
 }
 
 .card-grid {
@@ -296,12 +322,25 @@ a:hover {
 }
 
 .stem-leaf-plot > .node {
-  width: calc( 50% - 40px) !important;
+  width: calc( 50% - 40px);
+  padding-bottom: 2em;
   position: relative;
+}
+
+@media screen and (max-width: 800px) {
+  .stem-leaf-plot > .node {
+    width: 100% !important;
+  }
 }
 
 .stem-leaf-plot > .node:nth-child(even) {
   left: calc(calc( 50% - 40px) + 40px);
+}
+
+@media screen and (max-width: 800px) {
+  .stem-leaf-plot > .node:nth-child(even) {
+    left: 0 !important;
+  }
 }
 
 .stem-leaf-plot > .node:nth-child(even)::after {
@@ -362,6 +401,36 @@ a:hover {
   z-index: -1;
 }
 
+@media screen and (max-width: 800px) {
+  .stem-leaf-plot > .node:nth-child(odd)::after {
+    left: calc(-1 * 40px / 2 - 0.2rem / 2) !important;
+    content: "";
+    position: absolute;
+    top: 50%;
+    display: block;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    height: calc(100% + 10px);
+    width: 0.2rem;
+    background: #0fd852;
+    z-index: -2;
+  }
+  .stem-leaf-plot > .node:nth-child(odd)::before {
+    left: calc(-1 * 40px / 2 - 0.2rem / 2) !important;
+    content: "";
+    position: absolute;
+    top: 50%;
+    display: block;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    height: calc(0.2rem * 3);
+    width: calc(0.2rem * 3);
+    background: #0fd852;
+    border-radius: 50%;
+    z-index: -1;
+  }
+}
+
 .stem-leaf-plot > .node .node-body .date {
   color: #0fd852;
 }
@@ -390,13 +459,27 @@ a:hover {
   padding: 3em;
 }
 
-.contact-form-container .columns {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
-  grid-auto-rows: 1;
-  grid-gap: 1rem;
+@media screen and (max-width: 800px) {
+  .contact-form-container .columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .contact-form-container .columns {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+    grid-auto-rows: 1;
+    grid-gap: 1rem;
+  }
 }
 
 .contact-form-container .columns .contact-form input,

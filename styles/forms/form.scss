@@ -5,10 +5,16 @@
     background-color: $color-nuetral-700;
     padding: 3em;
     .columns {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-auto-rows: 1;
-        grid-gap: 1rem;
+        @media screen and (max-width: $small-screen) {
+            display: flex;
+            flex-direction: column;
+        }
+        @media screen and (min-width: $small-screen) {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-auto-rows: 1;
+            grid-gap: 1rem;
+        }
         .contact-form {
             input,
             textarea {

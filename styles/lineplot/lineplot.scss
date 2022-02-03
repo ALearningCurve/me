@@ -20,7 +20,11 @@ $bar-size: .2rem;
     padding-bottom: 10px;
     &>.node {
         $main-color: $color-accent-500;
-        width: $half-width !important;
+        width: $half-width;
+        padding-bottom: 2em;
+        @media screen and (max-width: $small-screen) {
+            width: 100% !important;
+        }
         position: relative;
         // ! Stuff for the positioning of stems and nodes
         // The stem in the middle of each element
@@ -51,8 +55,12 @@ $bar-size: .2rem;
         }
         // Offset to center between nodes on either side
         $center-offset: calc(-1 * #{$gutter} / 2 - #{$bar-size} / 2);
+        // The items on the "right" of the stem
         &:nth-child(even) {
             left: calc(#{$half-width} + #{$gutter});
+            @media screen and (max-width: $small-screen) {
+                left: 0 !important;
+            }
             &::after {
                 left: $center-offset;
                 @include pseudo-line;
@@ -62,6 +70,7 @@ $bar-size: .2rem;
                 @include pseudo-dot;
             }
         }
+        // The items on the "left" of the stem
         &:nth-child(odd) {
             &::after {
                 right: $center-offset;
@@ -71,8 +80,18 @@ $bar-size: .2rem;
                 right: $center-offset;
                 @include pseudo-dot;
             }
+            @media screen and (max-width: $small-screen) {
+                &::after {
+                    left: $center-offset !important;
+                    @include pseudo-line;
+                }
+                &::before {
+                    left: $center-offset !important;
+                    @include pseudo-dot;
+                }
+            }
         }
-        // ! Stuff for the node content
+        // Stuff for the node content
         .node-body {
             .date {
                 color: $main-color;
