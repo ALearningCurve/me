@@ -25,12 +25,13 @@ h2,
 h3,
 h4 {
     line-height: 1em;
+    transition: .2s;
 }
 
 h1 {
     font-size: 10em;
     @media screen and (max-width: $small-screen) {
-        font-size: 5em !important;
+        font-size: 5em;
     }
     padding: 0px;
     padding-left: 12px;
@@ -47,7 +48,15 @@ h1 {
 .sublead {
     font-size: 2em;
     @media screen and (max-width: $small-screen) {
-        font-size: 1.5em !important;
+        font-size: 1.5em;
+    }
+}
+
+#experience-header {
+    // this word is super long so it needs to be a little smaller for
+    // Some phones
+    @media screen and (max-width: $small-screen) {
+        font-size: 4.5em;
     }
 }
 
@@ -69,7 +78,7 @@ a {
     height: 100vh;
     /* background-color: var(--clr-neutral-800); */
     /* snapping */
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y;
     overflow-y: scroll;
     overflow-x: hidden;
     // Make a little  bar in between each of the sections 
@@ -98,22 +107,7 @@ a {
             position: relative;
             h1 {
                 position: relative;
-                left: -1em;
-                // Add typer at end of each header
-                // &::after {
-                //     content: "";
-                //     position: absolute;
-                //     right: 1rem;
-                //     top: 50%;
-                //     display: block;
-                //     transform: translateY(50%);
-                //     height: 50%;
-                //     width: .2rem;
-                //     background: $color-accent-800;
-                //     z-index: -1;
-                //     // transform-origin: center;
-                //     // transition: transform 750ms ease;
-                // }
+                left: -.6em;
             }
         }
         /* width: calc(100% - 10em); */
@@ -144,3 +138,53 @@ a {
 @import 'cards/all';
 @import 'lineplot/all';
 @import 'forms/all';
+// --------------------------- Scrolling Animations
+[data-inviewport="full-scale-in"] {
+    transition: 3s;
+    transform: scale(1.1);
+}
+
+[data-inviewport="full-scale-in"].is-inViewport {
+    transform: scale(1);
+}
+
+[data-inviewport="section-anim-in"] {
+    transition: 1s;
+    transform: scale(0.9);
+}
+
+[data-inviewport="section-anim-in"].is-inViewport {
+    transform: scale(1);
+}
+
+[data-inviewport="item-anim-in"] {
+    transition: 1s;
+    transform: scale(0.5);
+}
+
+[data-inviewport="item-anim-in"].is-inViewport {
+    transform: scale(1);
+}
+
+[data-inviewport="item-anim-in-rise-in"] {
+    transition: 1s;
+    transform: translateY(10%);
+    opacity: 0;
+}
+
+[data-inviewport="item-anim-in-rise-in"].is-inViewport {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+        transition-delay: 0ms !important;
+    }
+}

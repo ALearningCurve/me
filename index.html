@@ -15,7 +15,7 @@
 
         <!-- TODO: Main -->
         <section id="main">
-            <div class="section-container">
+            <div class="section-container" data-inviewport="full-scale-in">
                 <div>
                     <h1>I<span class="accent">'</span>m</h1>
                     <h1>Will<span class="accent">.</span></h1>
@@ -32,8 +32,8 @@
 
         <!-- TODO: Experience -->
         <section>
-            <div class="section-container">
-                <h1>Experience</h1>
+            <div class="section-container" data-inviewport="section-anim-in">
+                <h1 id="experience-header">Experience</h1>
                 <div class="stem-leaf-plot" id="experience-nodes">
                     <!-- Exmaple of each node in this plot 
                         <div class="node">
@@ -50,7 +50,7 @@
         </section>
         <!-- TODO: Projects -->
         <section>
-            <div class="section-container">
+            <div class="section-container" data-inviewport="section-anim-in">
                 <h1>Projects</h1>
                 <div class="card-grid" id="main-card-grid">
                     <!-- example card
@@ -71,7 +71,7 @@
         <!-- ? Look at brookes website -->
         <!-- TODO: Contact Me -->
         <section>
-            <div class="section-container">
+            <div class="section-container" data-inviewport="section-anim-in">
                 <h1>Contact me!</h1>
                 <div class="block contact-form-container">
                     <div class="columns">
@@ -111,7 +111,9 @@
             </div>
         </section>
     </div>
-    <script src="scripts/index.js"></script>
+
+
+    <script type="module" src="scripts/index.js"></script>
 </body>
 
 </html>

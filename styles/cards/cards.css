@@ -151,20 +151,4 @@
     visibility: visible !important;
   }
 }
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    -webkit-animation-duration: .01ms !important;
-            animation-duration: .01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
-    -webkit-transition-duration: .01ms !important;
-            transition-duration: .01ms !important;
-    scroll-behavior: auto !important;
-    -webkit-transition-delay: 0ms !important;
-            transition-delay: 0ms !important;
-  }
-}
 /*# sourceMappingURL=cards.css.map */

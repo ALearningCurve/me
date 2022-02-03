@@ -23,6 +23,8 @@ h2,
 h3,
 h4 {
   line-height: 1em;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 h1 {
@@ -37,7 +39,7 @@ h1 {
 
 @media screen and (max-width: 800px) {
   h1 {
-    font-size: 5em !important;
+    font-size: 5em;
   }
 }
 
@@ -51,7 +53,13 @@ h1 {
 
 @media screen and (max-width: 800px) {
   .sublead {
-    font-size: 1.5em !important;
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #experience-header {
+    font-size: 4.5em;
   }
 }
 
@@ -77,8 +85,8 @@ a:hover {
   height: 100vh;
   /* background-color: var(--clr-neutral-800); */
   /* snapping */
-  -ms-scroll-snap-type: y proximity;
-      scroll-snap-type: y proximity;
+  -ms-scroll-snap-type: y;
+      scroll-snap-type: y;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -127,7 +135,7 @@ a:hover {
 
 .main-container > section > .section-container h1 {
   position: relative;
-  left: -1em;
+  left: -.6em;
 }
 
 #main {
@@ -290,22 +298,6 @@ a:hover {
     -webkit-transform: scaleX(100%);
             transform: scaleX(100%);
     visibility: visible !important;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    -webkit-animation-duration: .01ms !important;
-            animation-duration: .01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
-    -webkit-transition-duration: .01ms !important;
-            transition-duration: .01ms !important;
-    scroll-behavior: auto !important;
-    -webkit-transition-delay: 0ms !important;
-            transition-delay: 0ms !important;
   }
 }
 
@@ -556,5 +548,71 @@ a:hover {
 
 .contact-form-container .link-icons > * {
   margin-right: 1em;
+}
+
+[data-inviewport="full-scale-in"] {
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+[data-inviewport="full-scale-in"].is-inViewport {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+[data-inviewport="section-anim-in"] {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+[data-inviewport="section-anim-in"].is-inViewport {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+[data-inviewport="item-anim-in"] {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+[data-inviewport="item-anim-in"].is-inViewport {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+[data-inviewport="item-anim-in-rise-in"] {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+  opacity: 0;
+}
+
+[data-inviewport="item-anim-in-rise-in"].is-inViewport {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: .01ms !important;
+            animation-duration: .01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: .01ms !important;
+            transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+    -webkit-transition-delay: 0ms !important;
+            transition-delay: 0ms !important;
+  }
 }
 /*# sourceMappingURL=index.css.map */
