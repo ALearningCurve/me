@@ -55,7 +55,14 @@ let projects = [{
         brief: `Made an interactive prototype with Figma. Although this is not a coding project, I am very proud of the final result of this Figma prototype.`,
         tags: ['Figma'],
         href: "https://www.figma.com/proto/15gyEcIYIwN9CMKD6SqDPm/CS1200Prototype?node-id=2191%3A8136"
-    }
+    },
+    {
+        title: "Design Chef",
+        img: "images/projects/chef.png",
+        brief: `Tired of writing out the long, repetitive, and boring design recipes for FUNDIES 1? Automate Racket (BSL, ISL, etc) design recipes using this website. This tool was especially made to speed up the creation of enumerables and other datatypes that are a pain in the butt to type out by hand!`,
+        tags: ['Python', 'Flask', 'JS'],
+        href: "https://github.com/ALearningCurve/DesignRecipeChef"
+    },
 ]
 
 let experiences = [{
