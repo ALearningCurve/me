@@ -1,13 +1,13 @@
 let projects = [{
         title: "IVR Config Manager",
-        img: "/images/projects/ivrwav.gif",
+        img: "images/projects/ivrwav.gif",
         brief: `Worked on this project at my internship at Community Software Group. This project made a web interface for administrators to access and update sound files and other configurations options for their IVR (automatic phone system). This project is very important because there are way too many agencies for developers to manually update the files and agency administrators for a lack of knowledge and security reasons can't modify the files on the server themselves.`,
         tags: ['.NETCore', 'JS', "Angular", "AWS", "IIS"],
         href: 'https://drive.google.com/file/d/1WGJzvaV9AF5KyxnRGR5_Yuo9MZ_gfjan/view?usp=sharing'
     },
     {
         title: "ETL Tool (Data Processing)",
-        img: "/images/projects/etl.gif",
+        img: "images/projects/etl.gif",
         brief: `This is another project that I worked on at Community Software Group (CSG) aiming to solve the issue of standardizing the process of importing data into Engage, a system at CSG. The system before this project is following a 30 page PDF to create a CSV by hand, which obviously isn't the best idea.
 
     We made this tool to convert an excel sheet of data into a data table on the backend with the original data being transformed into a format that works while all the user has to do is label the original column in our web app.
@@ -18,14 +18,14 @@ let projects = [{
     },
     {
         title: "Desktop Pet",
-        img: "/images/projects/horse.png",
+        img: "images/projects/horse.png",
         brief: `Bored at looking at your desktop or miss your pet school? Then this project is for you! This is a python project that makes an interactable desktop pet that has its own animations. Pets are customizable, can have arbitrary amounts of animations, and can easily be added by editing a config file. When run, the pets will cycle animations, move around the sreen by themselves, or be moved by the user's mouse.`,
         tags: ['Python', 'TKinter'],
         href: "https://github.com/ALearningCurve/desktop-pet"
     },
     {
         title: "Langauge Learning NLP",
-        img: "/images/projects/nlpp.png",
+        img: "images/projects/nlpp.png",
         brief: `This is a project I did to enhance the reading and learning experience for students learning other languages. By adopting a format similar to google classroom, students can easily join online classrooms (called groups) and which teachers can easily moderate and control. The groups allow teachers to assign readings which students can interact with, such as by double clicking a word, to get a synonym of that word in the target foreign language and a translation after another successive click. The program will keep track of the students' clicks and allow the teacher to see what words they might need to spend more time on with the class. With built in image, pdf, and word document text extraction 
     (nlp) the program strives to be as user friendly for teachers to upload resources
     
@@ -37,28 +37,28 @@ let projects = [{
     },
     {
         title: "Design Chef",
-        img: "/images/projects/chef.png",
+        img: "images/projects/chef.png",
         brief: `Tired of writing out the long, repetitive, and boring design recipes for FUNDIES 1? Automate Racket (BSL, ISL, etc) design recipes using this website. This tool was especially made to speed up the creation of enumerables and other datatypes that are a pain in the butt to type out by hand!`,
         tags: ['Python', 'Flask', 'JS'],
         href: "https://github.com/ALearningCurve/DesignRecipeChef"
     },
     {
         title: "Raspberry Pi Garage Door Status",
-        img: "/images/projects/gdoor.png",
+        img: "images/projects/gdoor.png",
         brief: `When I leave the house, I have a bad habit of leaving the garage door open, which is like worrying if I left the oven on for me. So, I created a React website using tailwind to display the status of my garage doors. Using a raspberry pi with motion sensors and firebase (with authentication) I was able to get live, secure updates about my garage door on this website.`,
         tags: ['Python', 'Flask', 'JS', 'React', 'Firebase', 'Raspberry Pi/Sensor Boards'],
         href: "https://github.com/ALearningCurve/DesignRecipeChef"
     },
     {
         title: "Prototyping With Figma",
-        img: "/images/projects/prototypecs1200.gif",
+        img: "images/projects/prototypecs1200.gif",
         brief: `Made an interactive prototype with Figma. Although this is not a coding project, I am very proud of the final result of this Figma prototype.`,
         tags: ['Figma'],
         href: "https://www.figma.com/proto/15gyEcIYIwN9CMKD6SqDPm/CS1200Prototype?node-id=2191%3A8136"
     },
     {
         title: "Design Chef",
-        img: "/images/projects/chef.png",
+        img: "images/projects/chef.png",
         brief: `Tired of writing out the long, repetitive, and boring design recipes for FUNDIES 1? Automate Racket (BSL, ISL, etc) design recipes using this website. This tool was especially made to speed up the creation of enumerables and other datatypes that are a pain in the butt to type out by hand!`,
         tags: ['Python', 'Flask', 'JS'],
         href: "https://github.com/ALearningCurve/DesignRecipeChef"
