@@ -615,4 +615,122 @@ a:hover {
             transition-delay: 0ms !important;
   }
 }
+
+@-webkit-keyframes splash {
+  from {
+    height: 100vh;
+  }
+  to {
+    height: 25px;
+    bottom: 0px;
+  }
+}
+
+@keyframes splash {
+  from {
+    height: 100vh;
+  }
+  to {
+    height: 25px;
+    bottom: 0px;
+  }
+}
+
+@-webkit-keyframes splash-full {
+  from {
+    height: 100vh;
+  }
+  to {
+    height: 0px;
+  }
+}
+
+@keyframes splash-full {
+  from {
+    height: 100vh;
+  }
+  to {
+    height: 0px;
+  }
+}
+
+@-webkit-keyframes wave {
+  from {
+    -webkit-transform: translate(0, 0, 0) scale(1);
+            transform: translate(0, 0, 0) scale(1);
+  }
+  25% {
+    -webkit-transform: translateX(-25%) scaleY(0.6);
+            transform: translateX(-25%) scaleY(0.6);
+  }
+  60% {
+    -webkit-transform: translateX(-50%) scaleY(1);
+            transform: translateX(-50%) scaleY(1);
+  }
+  80% {
+    -webkit-transform: scaleY(1.3);
+            transform: scaleY(1.3);
+  }
+  to {
+    -webkit-transform: translate(0, 0, 0) scale(1);
+            transform: translate(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes wave {
+  from {
+    -webkit-transform: translate(0, 0, 0) scale(1);
+            transform: translate(0, 0, 0) scale(1);
+  }
+  25% {
+    -webkit-transform: translateX(-25%) scaleY(0.6);
+            transform: translateX(-25%) scaleY(0.6);
+  }
+  60% {
+    -webkit-transform: translateX(-50%) scaleY(1);
+            transform: translateX(-50%) scaleY(1);
+  }
+  80% {
+    -webkit-transform: scaleY(1.3);
+            transform: scaleY(1.3);
+  }
+  to {
+    -webkit-transform: translate(0, 0, 0) scale(1);
+            transform: translate(0, 0, 0) scale(1);
+  }
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#footer > div {
+  position: absolute;
+  bottom: 0;
+  width: 200vw;
+  height: 100vh;
+}
+
+#footer > div#first-foot {
+  background-color: #61c181;
+  -webkit-animation: splash-full 1s normal forwards ease 100ms;
+          animation: splash-full 1s normal forwards ease 100ms;
+  z-index: 10;
+}
+
+#footer > div#second-foot {
+  background-color: #0fd852;
+  -webkit-animation: splash-full 1s normal forwards ease 400ms;
+          animation: splash-full 1s normal forwards ease 400ms;
+  z-index: 9;
+}
+
+#footer > div#third-foot {
+  background-color: #0baa40;
+  -webkit-animation: splash 1s normal forwards ease 700ms;
+          animation: splash 1s normal forwards ease 700ms;
+  z-index: 8;
+}
 /*# sourceMappingURL=index.css.map */

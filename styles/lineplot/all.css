@@ -11,12 +11,25 @@
 }
 
 .stem-leaf-plot > .node {
-  width: calc( 50% - 40px) !important;
+  width: calc( 50% - 40px);
+  padding-bottom: 2em;
   position: relative;
+}
+
+@media screen and (max-width: 800px) {
+  .stem-leaf-plot > .node {
+    width: 100% !important;
+  }
 }
 
 .stem-leaf-plot > .node:nth-child(even) {
   left: calc(calc( 50% - 40px) + 40px);
+}
+
+@media screen and (max-width: 800px) {
+  .stem-leaf-plot > .node:nth-child(even) {
+    left: 0 !important;
+  }
 }
 
 .stem-leaf-plot > .node:nth-child(even)::after {
@@ -75,6 +88,36 @@
   background: #0fd852;
   border-radius: 50%;
   z-index: -1;
+}
+
+@media screen and (max-width: 800px) {
+  .stem-leaf-plot > .node:nth-child(odd)::after {
+    left: calc(-1 * 40px / 2 - 0.2rem / 2) !important;
+    content: "";
+    position: absolute;
+    top: 50%;
+    display: block;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    height: calc(100% + 10px);
+    width: 0.2rem;
+    background: #0fd852;
+    z-index: -2;
+  }
+  .stem-leaf-plot > .node:nth-child(odd)::before {
+    left: calc(-1 * 40px / 2 - 0.2rem / 2) !important;
+    content: "";
+    position: absolute;
+    top: 50%;
+    display: block;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    height: calc(0.2rem * 3);
+    width: calc(0.2rem * 3);
+    background: #0fd852;
+    border-radius: 50%;
+    z-index: -1;
+  }
 }
 
 .stem-leaf-plot > .node .node-body .date {
