@@ -45,10 +45,54 @@ h1 {
     color: $color-accent-500
 }
 
+@keyframes blink {
+    from {
+        opacity: 1;
+        // transform: scaleY();
+    }
+    49% {
+        opacity: 1;
+    }
+    51% {
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
 .sublead {
     font-size: 2em;
     @media screen and (max-width: $small-screen) {
         font-size: 1.5em;
+    }
+    position: relative;
+    width: fit-content;
+    // Show a blinking cursor to the right of the text
+    &::after {
+        // Code for cursor like "|"
+        // content: "";
+        // position: absolute;
+        // top: -50%;
+        // right: -.4em;
+        // display: block;
+        // transform: translateY(50%);
+        // height: 100%;
+        // width: .1em;
+        // background: wheat;
+        // z-index: 1;
+        // animation: blink .5s linear infinite;
+        // Code for cursor like "_"
+        content: "";
+        position: absolute;
+        bottom: .3em;
+        right: -.4em;
+        display: block;
+        width: .4em;
+        height: .1em;
+        background: wheat;
+        z-index: 1;
+        animation: blink .5s linear infinite;
     }
 }
 
@@ -58,6 +102,7 @@ h1 {
     @media screen and (max-width: $small-screen) {
         font-size: 4.5em;
     }
+    position: relative;
 }
 
 .caps {

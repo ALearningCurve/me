@@ -47,14 +47,66 @@ h1 {
   color: #0fd852;
 }
 
+@-webkit-keyframes blink {
+  from {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .sublead {
   font-size: 2em;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 @media screen and (max-width: 800px) {
   .sublead {
     font-size: 1.5em;
   }
+}
+
+.sublead::after {
+  content: "";
+  position: absolute;
+  bottom: .3em;
+  right: -.4em;
+  display: block;
+  width: .4em;
+  height: .1em;
+  background: wheat;
+  z-index: 1;
+  -webkit-animation: blink .5s linear infinite;
+          animation: blink .5s linear infinite;
+}
+
+#experience-header {
+  position: relative;
 }
 
 @media screen and (max-width: 800px) {
