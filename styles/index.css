@@ -135,13 +135,13 @@ a:hover {
 .snap-y {
   -ms-scroll-snap-type: y;
       scroll-snap-type: y;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 .main-container {
   width: 100vw;
   height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
   /* background-color: var(--clr-neutral-800); */
   /* snapping */
 }

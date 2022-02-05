@@ -120,13 +120,13 @@ a {
 // ! Snapable area
 .snap-y {
     scroll-snap-type: y;
-    overflow-y: scroll;
-    overflow-x: hidden;
 }
 
 .main-container {
     width: 100vw;
     height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
     /* background-color: var(--clr-neutral-800); */
     /* snapping */
     // Make a little  bar in between each of the sections 
