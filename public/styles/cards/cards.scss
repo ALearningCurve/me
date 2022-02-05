@@ -26,10 +26,11 @@ $min-card-hieght: 400px;
     }
     .card-content {
         padding: 1rem;
-        background: linear-gradient( 180deg, #ffffff00 0%, #acb6cc 14%, $color-nuetral-700 25%);
+        // background: linear-gradient( 180deg, #ffffff00 0%, $color-nuetral-700 20%);
+        background-color: $color-nuetral-700;
         height: 100%;
         overflow: hidden;
-        border-radius: 1em;
+        // border-radius: 1em;
         .card-title {
             position: relative;
             width: fit-content;

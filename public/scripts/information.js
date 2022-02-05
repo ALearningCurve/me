@@ -25,7 +25,7 @@ let projects = [{
     },
     {
         title: "Desktop Pet",
-        img: "images/projects/horse.png",
+        img: "images/projects/desktophorse.gif",
         brief: `Bored at looking at your desktop or miss your pet school? Then this project is for you! This is a python project that makes an interactable desktop pet that has its own animations. Pets are customizable, can have arbitrary amounts of animations, and can easily be added by editing a config file. When run, the pets will cycle animations, move around the sreen by themselves, or be moved by the user's mouse.`,
         tags: ['Python', 'TKinter'],
         href: "https://github.com/ALearningCurve/desktop-pet"
