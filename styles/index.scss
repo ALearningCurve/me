@@ -171,6 +171,35 @@ a {
     }
 }
 
+.toggle {
+    height: 0px;
+    transition: height ease 1s;
+    overflow: hidden;
+    &.show {
+        height: fit-content;
+    }
+}
+
+.btn {
+    padding: 5px;
+    &.btn-outline-green {
+        background-color: rgba(255, 255, 255, 0);
+        color: $color-accent-600;
+        border-color: $color-accent-600;
+        border-style: solid;
+        transition: color 300ms, background-color 300ms, transform 300ms;
+        &:hover {
+            background-color: $color-accent-600;
+            color: $color-accent-100;
+            transform: scale(1.2);
+        }
+    }
+    &.huge {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 // ! Main (IE one with face) 
 #main {
     padding-top: 3em;
@@ -241,7 +270,6 @@ a {
     }
     to {
         height: 25px;
-        bottom: 0px;
     }
 }
 

@@ -190,6 +190,46 @@ a:hover {
   left: -.6em;
 }
 
+.toggle {
+  height: 0px;
+  -webkit-transition: height ease 1s;
+  transition: height ease 1s;
+  overflow: hidden;
+}
+
+.toggle.show {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.btn {
+  padding: 5px;
+}
+
+.btn.btn-outline-green {
+  background-color: rgba(255, 255, 255, 0);
+  color: #0baa40;
+  border-color: #0baa40;
+  border-style: solid;
+  -webkit-transition: color 300ms, background-color 300ms, -webkit-transform 300ms;
+  transition: color 300ms, background-color 300ms, -webkit-transform 300ms;
+  transition: color 300ms, background-color 300ms, transform 300ms;
+  transition: color 300ms, background-color 300ms, transform 300ms, -webkit-transform 300ms;
+}
+
+.btn.btn-outline-green:hover {
+  background-color: #0baa40;
+  color: #f8fcf9;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.btn.huge {
+  width: 100%;
+  text-align: center;
+}
+
 #main {
   padding-top: 3em;
 }
@@ -674,7 +714,6 @@ a:hover {
   }
   to {
     height: 25px;
-    bottom: 0px;
   }
 }
 
@@ -684,7 +723,6 @@ a:hover {
   }
   to {
     height: 25px;
-    bottom: 0px;
   }
 }
 
