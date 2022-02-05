@@ -1,3 +1,10 @@
+/**
+ * Insert information into document from JSON for:
+ *  - Projects
+ *  - Experiences
+ */
+
+
 let projects = [{
         title: "IVR Config Manager",
         img: "images/projects/ivrwav.gif",
@@ -113,10 +120,12 @@ let experiences = [{
     }
 ]
 
+/**
+ * Creates cards in the projects section based on the passed json
+ * @param projects: The list of project objects to create cards for
+ */
 const createCards = (projects) => {
-    /**
-     * @param projects: The list of project objects to create cards for
-     */
+
     const cards = document.getElementById("main-card-grid");
 
     for (let i = 0; i < projects.length; i++) {
@@ -154,10 +163,11 @@ const createCards = (projects) => {
     }
 }
 
+/**
+ * creates nodes for each of the given experiences
+ * @param experiences: The list of experiences objects to create node in the steamleafplot for
+ */
 const createExperiences = (experiences) => {
-    /**
-     * @param experiences: The list of experiences objects to create node in the steamleafplot for
-     */
 
     const nodes = document.getElementById("experience-nodes");
 
@@ -201,6 +211,10 @@ const createExperiences = (experiences) => {
     }
 }
 
+/**
+ * TODO: Implement modals
+ * @param {*} project 
+ */
 const createProjectModal = (project) => {
     open(project.href, "_blank")
 }
@@ -209,7 +223,10 @@ const createProjectModal = (project) => {
 
 
 
-
+/**
+ * Creates elements in the page for experiences and project sections
+ * @returns if setup was complete
+ */
 export const insertInformation = () => {
     // Run the customizations
     createCards(projects)

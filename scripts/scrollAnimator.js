@@ -1,3 +1,7 @@
+/**
+ * Adds animations to elements when they are visable. elements must look like
+ *  <element data-inviewport="anim-name"> to be watched
+ */
 export const setupScrollAnimations = () => {
     const inViewport = (entries, observer) => {
         entries.forEach(entry => {

@@ -118,14 +118,17 @@ a {
 }
 
 // ! Snapable area
+.snap-y {
+    scroll-snap-type: y;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 .main-container {
     width: 100vw;
     height: 100vh;
     /* background-color: var(--clr-neutral-800); */
     /* snapping */
-    scroll-snap-type: y;
-    overflow-y: scroll;
-    overflow-x: hidden;
     // Make a little  bar in between each of the sections 
     &>section::after {
         $size: calc(min(25em, 50%));
@@ -171,12 +174,24 @@ a {
     }
 }
 
-.toggle {
-    height: 0px;
-    transition: height ease 1s;
-    overflow: hidden;
-    &.show {
+@keyframes expand {
+    from {
+        height: 0px;
+    }
+    to {
         height: fit-content;
+    }
+}
+
+.toggle {
+    // transform: scaleY(0);
+    // transition: transform ease 1s;
+    overflow: hidden;
+    transform-origin: top left;
+    transition: max-height 2s ease;
+    max-height: 0px;
+    &.show {
+        max-height: 900px;
     }
 }
 

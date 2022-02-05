@@ -132,15 +132,18 @@ a:hover {
           transform: scale(1.1);
 }
 
+.snap-y {
+  -ms-scroll-snap-type: y;
+      scroll-snap-type: y;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
 .main-container {
   width: 100vw;
   height: 100vh;
   /* background-color: var(--clr-neutral-800); */
   /* snapping */
-  -ms-scroll-snap-type: y;
-      scroll-snap-type: y;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 .main-container > section::after {
@@ -190,17 +193,38 @@ a:hover {
   left: -.6em;
 }
 
+@-webkit-keyframes expand {
+  from {
+    height: 0px;
+  }
+  to {
+    height: -webkit-fit-content;
+    height: fit-content;
+  }
+}
+
+@keyframes expand {
+  from {
+    height: 0px;
+  }
+  to {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
 .toggle {
-  height: 0px;
-  -webkit-transition: height ease 1s;
-  transition: height ease 1s;
   overflow: hidden;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transition: max-height 2s ease;
+  transition: max-height 2s ease;
+  max-height: 0px;
 }
 
 .toggle.show {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  max-height: 900px;
 }
 
 .btn {
