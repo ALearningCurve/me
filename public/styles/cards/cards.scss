@@ -18,6 +18,12 @@ $min-card-hieght: 400px;
     height: 400px;
     border-radius: 1em;
     overflow: hidden;
+    &:hover,
+    &:focus,
+    &:focus-within {
+        transform: scale(1.04) !important;
+        // transition: transform 750ms !important;
+    }
     .card-content {
         padding: 1rem;
         background: linear-gradient( 180deg, #ffffff00 0%, #acb6cc 14%, $color-nuetral-700 25%);
@@ -59,19 +65,19 @@ $min-card-hieght: 400px;
             height: 245px;
             color: $color-accent-100;
         }
-        .button {
-            cursor: pointer;
-            display: inline;
-            text-decoration: none;
-            color: $color-accent-800;
-            background-color: $color-accent-200;
-            padding: .5em;
-            border-radius: .25em;
-            &:hover,
-            &:focus {
-                background-color: $color-accent-300;
-            }
-        }
+        // .button {
+        //     cursor: pointer;
+        //     display: inline;
+        //     text-decoration: none;
+        //     color: $color-accent-800;
+        //     background-color: $color-accent-200;
+        //     padding: .5em;
+        //     border-radius: .25em;
+        //     &:hover,
+        //     &:focus {
+        //         background-color: $color-accent-300;
+        //     }
+        // }
     }
 }
 
@@ -84,12 +90,6 @@ $min-card-hieght: 400px;
     .card-content>*:not(.card-title) {
         opacity: 0;
         transition: opacity 500ms;
-    }
-    .card:hover,
-    .card:focus,
-    .card:focus-within {
-        transform: scale(1.01);
-        transition: transform 750ms;
     }
     .card:hover .card-title::before,
     .card:focus-within .card-title::before {

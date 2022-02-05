@@ -152,8 +152,8 @@ const createCards = (projects) => {
         body.innerText = project.brief
 
         let button = document.createElement('a');
-        button.className = "button";
         button.innerText = "Learn More"
+        button.classList.add("btn", "btn-outline-green", "huge")
         button.onclick = () => {
             createProjectModal(project);
         }
@@ -170,7 +170,7 @@ const createCards = (projects) => {
     if (projects.length > 4) {
         let btn = document.createElement('button');
         btn.classList.add("btn", "btn-outline-green", "huge");
-        btn.innerHTML = "Show More Projects";
+        btn.innerHTML = `<span id="proj-btn-action-word">Show </span>(${projects.length - 4}) Additional Projects`;
         btn.id = "show-project-cards";
         btn.style = "margin-top: 4em; margin-bottom: 4em";
 

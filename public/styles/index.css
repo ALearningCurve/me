@@ -230,6 +230,7 @@ a:hover {
 
 .btn {
   padding: 5px;
+  display: block;
 }
 
 .btn.btn-outline-green {
@@ -237,17 +238,17 @@ a:hover {
   color: #0baa40;
   border-color: #0baa40;
   border-style: solid;
-  -webkit-transition: color 300ms, background-color 300ms, -webkit-transform 300ms;
-  transition: color 300ms, background-color 300ms, -webkit-transform 300ms;
-  transition: color 300ms, background-color 300ms, transform 300ms;
-  transition: color 300ms, background-color 300ms, transform 300ms, -webkit-transform 300ms;
+  -webkit-transition: color 300ms, background-color 300ms, -webkit-transform 300ms !important;
+  transition: color 300ms, background-color 300ms, -webkit-transform 300ms !important;
+  transition: color 300ms, background-color 300ms, transform 300ms !important;
+  transition: color 300ms, background-color 300ms, transform 300ms, -webkit-transform 300ms !important;
 }
 
 .btn.btn-outline-green:hover {
   background-color: #0baa40;
   color: #f8fcf9;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.2) !important;
+          transform: scale(1.2) !important;
 }
 
 .btn.huge {
@@ -282,6 +283,11 @@ a:hover {
   height: 400px;
   border-radius: 1em;
   overflow: hidden;
+}
+
+.card:hover, .card:focus, .card:focus-within {
+  -webkit-transform: scale(1.04) !important;
+          transform: scale(1.04) !important;
 }
 
 .card .card-content {
@@ -342,20 +348,6 @@ a:hover {
   color: #f8fcf9;
 }
 
-.card .card-content .button {
-  cursor: pointer;
-  display: inline;
-  text-decoration: none;
-  color: #04461b;
-  background-color: #d0ecd9;
-  padding: .5em;
-  border-radius: .25em;
-}
-
-.card .card-content .button:hover, .card .card-content .button:focus {
-  background-color: #a1dab4;
-}
-
 @media (hover) {
   .card-content {
     -webkit-transform: translateY(280px);
@@ -369,16 +361,6 @@ a:hover {
     opacity: 0;
     -webkit-transition: opacity 500ms;
     transition: opacity 500ms;
-  }
-  .card:hover,
-  .card:focus,
-  .card:focus-within {
-    -webkit-transform: scale(1.01);
-            transform: scale(1.01);
-    -webkit-transition: -webkit-transform 750ms;
-    transition: -webkit-transform 750ms;
-    transition: transform 750ms;
-    transition: transform 750ms, -webkit-transform 750ms;
   }
   .card:hover .card-title::before,
   .card:focus-within .card-title::before {

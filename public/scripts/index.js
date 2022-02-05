@@ -52,7 +52,11 @@ const projectsButton = document.getElementById("show-project-cards");
 
 projectsButton.onclick = () => {
     toggleDivClass("toggle-cards")
-    projectsButton.innerHTML = "Hide Some Projects"
+    const span = document.getElementById("proj-btn-action-word")
+    let word = span.innerHTML.trim().toLowerCase();
+    word = word == "show" ? "Hide" : "Show"
+
+    span.innerHTML = word + " ";
 }
 
 resumeButton.onclick = () => {

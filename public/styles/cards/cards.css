@@ -18,6 +18,11 @@
   overflow: hidden;
 }
 
+.card:hover, .card:focus, .card:focus-within {
+  -webkit-transform: scale(1.04) !important;
+          transform: scale(1.04) !important;
+}
+
 .card .card-content {
   padding: 1rem;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff00), color-stop(14%, #acb6cc), color-stop(25%, #272d3a));
@@ -76,20 +81,6 @@
   color: #f8fcf9;
 }
 
-.card .card-content .button {
-  cursor: pointer;
-  display: inline;
-  text-decoration: none;
-  color: #04461b;
-  background-color: #d0ecd9;
-  padding: .5em;
-  border-radius: .25em;
-}
-
-.card .card-content .button:hover, .card .card-content .button:focus {
-  background-color: #a1dab4;
-}
-
 @media (hover) {
   .card-content {
     -webkit-transform: translateY(280px);
@@ -103,16 +94,6 @@
     opacity: 0;
     -webkit-transition: opacity 500ms;
     transition: opacity 500ms;
-  }
-  .card:hover,
-  .card:focus,
-  .card:focus-within {
-    -webkit-transform: scale(1.01);
-            transform: scale(1.01);
-    -webkit-transition: -webkit-transform 750ms;
-    transition: -webkit-transform 750ms;
-    transition: transform 750ms;
-    transition: transform 750ms, -webkit-transform 750ms;
   }
   .card:hover .card-title::before,
   .card:focus-within .card-title::before {
