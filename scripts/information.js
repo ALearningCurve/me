@@ -132,7 +132,12 @@ const createCards = (projects) => {
         let project = projects[i];
 
         let card = document.createElement('div');
-        card.className = "card";
+        card.classList.add("card");
+
+        if (i > 3) {
+            card.classList.add("toggle", "toggle-cards");
+        }
+
         card.style = `background-image: url(${project.img});`
         card.setAttribute("data-inviewport", "item-anim-in")
         let content = document.createElement('div');
@@ -161,6 +166,19 @@ const createCards = (projects) => {
 
         cards.appendChild(card);
     }
+
+    if (projects.length > 4) {
+        let btn = document.createElement('button');
+        btn.classList.add("btn", "btn-outline-green", "huge");
+        btn.innerHTML = "Show More Projects";
+        btn.id = "show-project-cards";
+        btn.style = "margin-top: 4em; margin-bottom: 4em";
+
+        const section = document.getElementById("projects-section");
+        section.appendChild(btn)
+
+
+    }
 }
 
 /**
@@ -175,7 +193,7 @@ const createExperiences = (experiences) => {
         let experience = experiences[i];
 
         let node = document.createElement('div');
-        node.className = "node";
+        node.classList.add("node");
         node.setAttribute("data-inviewport", "item-anim-in-rise-in")
 
         let body = document.createElement('div');

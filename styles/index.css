@@ -221,6 +221,7 @@ a:hover {
   -webkit-transition: max-height 2s ease;
   transition: max-height 2s ease;
   max-height: 0px;
+  padding: 0px !important;
 }
 
 .toggle.show {

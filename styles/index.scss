@@ -190,6 +190,7 @@ a {
     transform-origin: top left;
     transition: max-height 2s ease;
     max-height: 0px;
+    padding: 0px !important;
     &.show {
         max-height: 900px;
     }
