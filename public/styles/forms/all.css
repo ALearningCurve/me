@@ -3,6 +3,7 @@
   height: 50%;
   background-color: #272d3a;
   padding: 3em;
+  padding-bottom: 120px;
 }
 
 @media screen and (max-width: 800px) {

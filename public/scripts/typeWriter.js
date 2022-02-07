@@ -15,7 +15,7 @@ export const startTypeWriter = () => {
         "dog lover",
         "snowboarder",
         "foodie",
-        "family's parcheesi king",
+        "parcheesi lover",
         "science fiction reader",
         "roboticist",
     ]
