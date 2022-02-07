@@ -4,11 +4,14 @@
     height: 50%;
     background-color: $color-nuetral-700;
     padding: 3em;
+    padding-bottom: 120px;
     .columns {
+        // When the screen is small make sure that items all go in a column
         @media screen and (max-width: $small-screen) {
             display: flex;
             flex-direction: column;
         }
+        // Othersie display as | <contact-info> | <contact-form> |
         @media screen and (min-width: $small-screen) {
             display: grid;
             grid-template-columns: 1fr 2fr;
